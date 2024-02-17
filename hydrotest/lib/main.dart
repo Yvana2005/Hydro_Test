@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget DescriptionSection = Container(
-      padding: const EdgeInsets.all(32),
+      padding: const EdgeInsets.all(12),
       child: Text(
-        "cette application par pricipe permets de ",
+        "  Cette application par principe permets de realiser des etapes de blablabla et de diagnostique avant l'entree dans la presse hydrolique d'ou le nom de l'application celle ci permet de faire une verification des elemnets caracteristique de la bouteille GPL",
         softWrap: true,
+        style: TextStyle(fontSize: 17),
       ),
     );
     Widget ButtonSection = Container(
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildButtonColumn(Colors.red, Icons.add, "ADD"),
+          _buildButtonColumn(Colors.red, Icons.add_a_photo_rounded, "AJOUTER"),
           _buildButtonColumn(Colors.red, Icons.book_rounded, "MODIFIER")
         ],
       ),
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Icon(Icons.face_3_rounded, color: Colors.blue),
+                  Icon(Icons.face_3_rounded, color: Colors.red),
                   Text("J'aime"),
                 ],
               ),
