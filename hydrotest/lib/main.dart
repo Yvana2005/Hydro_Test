@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     Widget DescriptionSection = Container(
       padding: const EdgeInsets.all(12),
       child: Text(
-        "  Cette application par principe permets de realiser des etapes de blablabla et de diagnostique avant l'entree dans la presse hydrolique d'ou le nom de l'application celle ci permet de faire une verification des elemnets caracteristique de la bouteille GPL",
+        "  Cette application par principe permets de realiser des etapes de blabla et de diagnostique avant l'entree dans la presse hydrolique d'ou le nom de l'application celle ci permet de faire une verification GPL",
         softWrap: true,
         style: TextStyle(fontSize: 17),
       ),
@@ -42,6 +42,21 @@ class MyApp extends StatelessWidget {
             title: Text("SUIVI DES BOUTEILLES GPL"),
           ),
           body: ListView(children: [
+            Stack(
+              children: [
+                Container(
+                  width: 600,
+                  height: 240,
+                  child: Center(child: CircularProgressIndicator()),
+                ),
+                Image.asset(
+                  'images/bottles.jpg',
+                  width: 600,
+                  height: 240,
+                  fit: BoxFit.cover,
+                ),
+              ],
+            ),
             Container(
               padding: const EdgeInsets.all(8),
               child: Row(
@@ -54,7 +69,7 @@ class MyApp extends StatelessWidget {
                             padding: const EdgeInsets.only(
                                 bottom: 8, top: 10, left: 4),
                             child: Text(
-                              "Bienvenu sur cette application",
+                              "Bienvenue sur cette application",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
                             )),
@@ -67,8 +82,8 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Icon(Icons.face_3_rounded, color: Colors.red),
-                  Text("J'aime"),
+                  Icon(Icons.info, color: Colors.red),
+                  Text("Aide"),
                 ],
               ),
             ),
