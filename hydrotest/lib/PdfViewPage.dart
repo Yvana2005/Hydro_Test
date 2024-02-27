@@ -9,7 +9,7 @@ class PdfViewPage extends StatelessWidget {
         title: Text('Guide d\'utilisation'),
       ),
       body: PDFView(
-        filePath: 'assets/aide.pdf', // Chemin vers votre fichier PDF
+        filePath: 'asset/aide.pdf', // Chemin vers votre fichier PDF
       ),
     );
   }
